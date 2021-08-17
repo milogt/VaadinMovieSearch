@@ -2,7 +2,7 @@
 
 This project is a movie search application using Vaadin framework. It has been deployed with AWS
 using Elastic-Beanstalk, where you can access it at:
-http://moviesearch-env.eba-kpm4cyxm.us-east-1.elasticbeanstalk.com/
+http://moviesearchv2-env.eba-r2fhep4k.us-east-1.elasticbeanstalk.com/
 
 ## Running the application locally
 The project is a standard Maven project. To run it from the command line,
