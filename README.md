@@ -1,7 +1,8 @@
 # Movie Search
 
-This project can be used as a starting point to create your own Vaadin application with Spring Boot.
-It contains all the necessary configuration and some placeholder files to get you started.
+This project is a movie search application using Vaadin framework. It has been deployed with AWS
+using Elastic-Beanstalk, where you can access it at:
+http://moviesearch-env.eba-kpm4cyxm.us-east-1.elasticbeanstalk.com/
 
 ## Running the application
 The project is a standard Maven project. To run it from the command line,
