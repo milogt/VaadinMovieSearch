@@ -1,0 +1,36 @@
+.about {
+  display: block;
+  margin: 0 auto;
+  max-width: 1024px;
+  padding: 0 var(--lumo-space-l);
+}
+.about .button-layout {
+  margin-bottom: var(--lumo-space-l);
+  margin-top: var(--lumo-space-m);
+}
+
+.about .text {
+  margin: 1em 0 2.5em;
+  display: block;
+}
+
+.about .message {
+  min-height: 100px;
+  height: 35vh;
+  max-height: 500px;
+}
+
+.email-sent-success {
+  max-width: 35vw;
+}
+
+.email-sent-success p {
+  max-height: 20vh;
+  overflow-y: scroll;
+}
+
+.email-sent-success h4 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
