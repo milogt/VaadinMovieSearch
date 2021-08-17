@@ -14,11 +14,12 @@ public class LoadedItem implements Serializable {
     private String authorName;
     private String link;
     private String preview;
+    private String tags;
 
     //factory method
-    public static LoadedItem fromResult(Result result, String  userEmail){
+    public static LoadedItem fromResult(Result result){
         LoadedItem loadedItem = new LoadedItem();
-        loadedItem.setUserEmail(userEmail);
+        loadedItem.setUserEmail("untagged");
 
         loadedItem.setAuthorName(result.getArtistName());
 

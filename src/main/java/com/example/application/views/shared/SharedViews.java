@@ -27,16 +27,16 @@ public class SharedViews {
         verticalLayout.addClassName("vertical-layout");
 
 
-        Span title = getProperSpan(favorite.getTitle());
+        Span title = getProperSpan("Title: "+ favorite.getTitle());
         title.addClassNames("text", "title");
-        Span author = getProperSpan(favorite.getAuthorName());
+        Span author = getProperSpan("Director: "+favorite.getAuthorName());
         author.addClassName("text");
-        Span desc = getProperSpan(favorite.getDescription());
+        Span desc = getProperSpan("Description: "+favorite.getDescription());
         desc.addClassName("text");
-        Span email = getProperSpan(favorite.getUserEmail());
-        email.addClassName("text");
-        Span year = getProperSpan(favorite.getYear());
+        Span year = getProperSpan("Genre: "+ favorite.getYear());
         year.addClassName("text");
+        Span email = getProperSpan("Tags: "+favorite.getUserEmail());
+        email.addClassName("text");
 
         if (favMode) {
             detail.addClassName("fav-mode");

@@ -87,7 +87,7 @@ public class MovielistView extends Div implements AfterNavigationObserver {
 
                 Cache.getInstance().addItems(volResp.getResults()
                         .stream()
-                        .map( item -> LoadedItem.fromResult(item, Cache.getInstance().getEmail()))
+                        .map( item -> LoadedItem.fromResult(item))
                         .collect(Collectors.toList())
                 );
                 grid.setItems(Cache.getInstance().streamItems());

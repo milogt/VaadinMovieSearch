@@ -101,6 +101,37 @@ public class FavoritesRepository {
 
     }
 
+    public void editTags(UI ui, ResponseCallback<LoadedItem> callback, LoadedItem favoriteAdd) {
+
+        String raw = baseUrl + "/update/%s";
+        String formatted = String.format(raw, favoriteAdd.getId());
+        Mono<LoadedItem> mono = WebClient.create().put()
+
+                .uri(formatted)
+                .body(Mono.just(favoriteAdd), LoadedItem.class)
+                .retrieve()
+                .bodyToMono(LoadedItem.class);
+
+        mono
+                .doOnError(throwable -> {
+                    String message = "";
+                    switch (((WebClientResponseException.UnsupportedMediaType) throwable).getStatusCode().value()){
+                        default:
+                            message = "There was an error: " + throwable.getMessage();
+                    }
+                    final String finalMessage = message;
+                    ui.access(() -> {
+                        Notification.show(finalMessage , 2000,
+                                Notification.Position.BOTTOM_CENTER);
+//                        ui.navigate("favorites");
+                    });
+
+                })
+                .publishOn(Schedulers.fromExecutor(executorService))
+                .subscribe(results -> callback.operationFinished(results));
+
+    }
+
 
 
 }

@@ -37,6 +37,10 @@ public class FavoritesService extends ResponseEntityExceptionHandler {
         favoritesRepository.deleteFavoriteById(ui, callback, id);
     }
 
+    public void editTags(UI ui, ResponseCallback<LoadedItem> callback,
+                            LoadedItem favorite)  {
+        favoritesRepository.editTags(ui, callback, favorite);
+    }
 
 
 }
